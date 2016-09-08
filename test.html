@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>全选/全不选 运动爱好</title>
+<!-- 导入jquery -->
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#checkedAll").click(function() {
+			var flag = this.checked;
+			$(":checkbox[name='items']").attr("checked",flag); 
+		});
+        $(":checkbox[name='items']").click(function() {
+			$("#checkedAll").attr("checked", 
+					$(":checkbox[name='items']").length == 
+						$(":checkbox[name='items']:checked").length)
+		});
+	});
+
+</script>
+</head>
+<body>
+	<form method="post" action="">
+		你爱好的运动是？
+		 <input type="checkbox" id="checkedAll" /> 全选/全不选
+		  <br />
+		    <input type="checkbox" name="items" value="足球" /> 足球 
+			<input type="checkbox" name="items" value="篮球" /> 篮球 
+			<input type="checkbox" name="items" value="羽毛球" /> 羽毛球 
+			<input type="checkbox" name="items" value="乒乓球" /> 乒乓球
+	</form>
+
+</body>
+</html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jqyery+CSS折叠、合拢的多级菜单</title>
+
+<style type="text/css">
+*,body,ul,li,h1,h2{ margin:0; padding:0; list-style:none;} 
+body{font:12px "宋体";} 
+.tree_box{margin: 5px 0;width: 100px;overflow: hidden;}
+.tree_box h3,.tree_one h4,.tree_two li{cursor: pointer;}
+.tree_one,.tree_two{display: none;margin: 0 0 0 10px;overflow: hidden;}
+.tree_one li{margin: 5px 0;}
+</style>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+<div class="tree">
+    <div class="tree_box">
+        <h3>
+            我是一级菜单
+        </h3>
+        <ul class="tree_one" style="display: block;">
+            <li>
+                <h4>
+                    我是二级菜单
+                </h4>
+                <ul class="tree_two">
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                </ul>
+            </li>
+            <li>
+                <h4>
+                    我是二级菜单
+                </h4>
+                <ul class="tree_two">
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                </ul>
+            </li>
+            <li>
+                <h4>
+                    我是二级菜单
+                </h4>
+                <ul class="tree_two">
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="tree_box">
+        <h3>
+            我是一级菜单
+        </h3>
+        <ul class="tree_one">
+            <li>
+                <h4>
+                    我是二级菜单
+                </h4>
+                <ul class="tree_two">
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                </ul>
+            </li>
+            <li>
+                <h4>
+                    我是二级菜单
+                </h4>
+                <ul class="tree_two">
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                </ul>
+            </li>
+            <li>
+                <h4>
+                    我是二级菜单
+                </h4>
+                <ul class="tree_two">
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="tree_box">
+        <h3>
+            我是一级菜单
+        </h3>
+        <ul class="tree_one">
+            <li>
+                <h4>
+                    我是二级菜单
+                </h4>
+                <ul class="tree_two">
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                </ul>
+            </li>
+            <li>
+                <h4>
+                    我是二级菜单
+                </h4>
+                <ul class="tree_two">
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                </ul>
+            </li>
+            <li>
+                <h4>
+                    我是二级菜单
+                </h4>
+                <ul class="tree_two">
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                    <li>
+                        我是三级菜单
+                    <li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var h3 = $(".tree_box").find("h3");
+        var tree_one = $(".tree_box").find(".tree_one");
+        var h4 = $(".tree_one").find("h4");
+        var tree_two = $(".tree_one").find(".tree_two");
+        h3.each(function(i){
+            $(this).click(function(){
+                tree_one.eq(i).slideToggle();
+                tree_one.eq(i).parent().siblings().find(".tree_one").slideUp();
+            })
+        })
+        h4.each(function(i){
+            $(this).click(function(){
+                tree_two.eq(i).slideToggle();
+                tree_two.eq(i).parent().siblings().find(".tree_two").slideUp();
+            })
+        })
+    })
+    function my(){
+        alert(123);
+    }
+</script>
+<iframe src="keywordTest.html"></iframe>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-1.8.3.min.js"> </script>
+       <script type="text/javascript">
+        $(function(){
+            $("#panel h5.head").bind("click",function(){
+                var $content = $(this).next();
+                if($content.is(":visible")){
+                    $content.hide();
+                }else{
+                    $content.show();
+                }
+                })
+            })
+       </script>
+    <style>
+        *{margin:0;padding:0;}
+        body { font-size: 13px; line-height: 130%; padding: 60px }
+        #panel { width: 300px; border: 1px solid #0050D0 }
+        .head { height:24px;line-height:24px;text-indent:10px;background: #96E555; cursor: pointer;width:100%; }
+        .content { padding: 10px; text-indent:24px; border-top: 1px solid #0050D0;display:block;display:none; }
+    </style>
+</head>
+
+<body>
+<div id="panel">
+    <h5 class="head">什么是jQuery?</h5>
+    <div class="content">
+        jQuery是继Prototype之后又一个优秀的JavaScript库，它是一个由 John Resig 创建于2006年1月的开源项目。jQuery凭借简洁的语法和跨平台的兼容性，极大地简化了JavaScript开发人员遍历HTML文档、操作DOM、处理事件、执行动画和开发Ajax。它独特而又优雅的代码风格改变了JavaScript程序员的设计思路和编写程序的方式。
+    </div>
+</div>
+</body>
+</html>
